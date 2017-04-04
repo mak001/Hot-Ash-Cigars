@@ -12,11 +12,11 @@ namespace HotAshCigars.Controllers
     public class CigarsController : Controller
     {
         // GET: Cigars
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pageQty = 15)
         {
 			using (HotAshContext context = new HotAshContext()) {
 				var cigars = context.Cigars;
-				return View(cigars.ToPagedList());
+				return View(cigars.ToPagedList(page, pageQty));
 			}
         }
 
