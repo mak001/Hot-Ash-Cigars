@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotAshCigars.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,9 +22,17 @@ namespace HotAshCigars.Controllers
         }
 
         // GET: Cigars/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            return View();
+			if (id == null) {
+				return RedirectToAction("Index");
+			}
+
+			using (HotAshContext context = new HotAshContext()) {
+				Cigar cigar = context.Cigars.FirstOrDefault(x => x.ID == id);
+				return View(cigar);
+			}
+				
         }
        
     } /* end of controller */

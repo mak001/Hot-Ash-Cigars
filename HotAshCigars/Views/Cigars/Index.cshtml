@@ -30,10 +30,10 @@
                         <div class="container row flex-column flex-sm-row justify-content-around mx-auto">
                             @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-info my-2" })
                             @Ajax.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { @item.ID }, new AjaxOptions {
-                           UpdateTargetId = "shoppingcartsummary",
-                           InsertionMode = InsertionMode.Replace,
-                           HttpMethod = "Get"
-                       }, new { @class = "btn btn-primary my-2" })
+                                UpdateTargetId = "shoppingcartsummary",
+                                InsertionMode = InsertionMode.Replace,
+                                HttpMethod = "Get"
+                            }, new { @class = "btn btn-primary my-2" })
                         </div>
                     </div>
                 </div>
