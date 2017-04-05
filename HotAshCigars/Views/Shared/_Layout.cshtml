@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using HotAshCigars.Models
+@{
+    bool userIsCheckingOut = ViewBag.AmCheckingOut == null ? false : true;
+    var homeLink = User.IsInRole("Admin") ? Url.Action("Index", "AdminTickets", "Admin") : Url.Action("Index", "Tickets", "Tickets");
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,34 +14,61 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body class="d-flex flex-column">
+
+    <header>
+        <a href="@homeLink">
+            <div class="jumbotron jumbotron-fluid bg-warning text-center">
+                <div class="container">
+                    <h1 class="display-4 display-sm-3 md-display-2">Hot Ash Cigars</h1>
+
+                    <p class="lead">Tagline here</p>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+        </a>
+    </header>
+
+    <nav class="navbar navbar-toggleable-sm sticky-top py-0">
+        <div class="container p-0 m-0">
+            <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="mainNav" aria-expanded="false">
+                <div class="navbar-nav mx-auto text-center">
+
+                    <a class="nav-item nav-link px-3" href="@homeLink">Home</a>
+
+                    @if (!User.IsInRole("Admin")) {
+                        <a href="@Url.Action("Index", "ShoppingCart")" class="nav-item nav-link px-3">
+                            Cart
+                            <span id="shoppingcartsummary" class="badge badge-pill badge-danger">
+                                @if (!User.IsInRole("Admin") && !userIsCheckingOut) {
+                                    @* Html.Action("Partial", "ShoppingCart") *@
+}
+                            </span>
+                        </a>}
+
+                    @if (Request.IsAuthenticated) {
+                        @Html.ActionLink("Orders", "Index", "Order", new { area = "" }, new { @class = "nav-item nav-link px-3" })
+}
+
+                    @Html.Partial("_LoginPartial")
+
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+    </nav>
+
+    <main class="container px-5 py-4">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    </main>
+
+    <footer class="py-3">
+        <div class="container">
+            <p>&copy; @DateTime.Now.Year - Hot Ash Cigars</p>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

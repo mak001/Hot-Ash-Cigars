@@ -1,12 +1,35 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html {
+    height: 100%;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+body {
+    min-height: 100%;
+}
+
+header .jumbotron {
+    margin: 0;
+}
+
+header + nav {
+    background-color: black;
+}
+
+header+nav .container {
+    width: 100%;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header a:hover, header a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    flex-grow: 1;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +44,9 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+footer {
+    color: white;
+    background-color: black;
 }
