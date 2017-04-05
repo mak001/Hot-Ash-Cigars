@@ -12,9 +12,14 @@ namespace HotAshCigars.Controllers
 {
     public class CigarsController : Controller
     {
+		
         // GET: Cigars
         public ActionResult Index(int page = 1, int pageQty = 15)
         {
+			if (User.IsInRole("Admin")) {
+				return RedirectToAction("Index", "CigarAdmin");
+			}
+
 			using (HotAshContext context = new HotAshContext()) {
 				var cigars = context.Cigars;
 				return View(cigars.ToPagedList(page, pageQty));
@@ -24,6 +29,10 @@ namespace HotAshCigars.Controllers
         // GET: Cigars/Details/5
         public ActionResult Details(int? id)
         {
+			if (User.IsInRole("Admin")) {
+				return RedirectToAction("Index", "CigarAdmin");
+			}
+
 			if (id == null) {
 				return RedirectToAction("Index");
 			}

@@ -1,7 +1,7 @@
 ﻿@using HotAshCigars.Models
 @{
     bool userIsCheckingOut = ViewBag.AmCheckingOut == null ? false : true;
-    var homeLink = User.IsInRole("Admin") ? Url.Action("Index", "AdminTickets", "Admin") : Url.Action("Index", "Tickets", "Tickets");
+    var homeLink = User.IsInRole("Admin") ? Url.Action("Index", "CigarAdmin", "Admin") : Url.Action("Index", "Cigars", "Cigars");
 }
 
 <!DOCTYPE html>
