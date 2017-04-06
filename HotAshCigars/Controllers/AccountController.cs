@@ -73,7 +73,7 @@ namespace HotAshCigars.Controllers
                 return View(model);
             }
 
-			Guid currTempId = Controllers.UserHelper.GetUserId();
+			Guid currTempId = Controllers.UserHelper.GetUserID();
 
 			// This doesn't count login failures towards account lockout
 			// To enable password failures to trigger account lockout, change to shouldLockout: true
@@ -157,7 +157,7 @@ namespace HotAshCigars.Controllers
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-				Guid oldTempUserId = Controllers.UserHelper.GetUserId();
+				Guid oldTempUserId = Controllers.UserHelper.GetUserID();
 				var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

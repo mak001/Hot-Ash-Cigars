@@ -12,7 +12,7 @@ using HotAshCigars.Models;
 namespace HotAshCigars.Controllers
 {
 
-	// [Authorize(Roles = "Admin")]
+	[Authorize(Roles = "Admin")]
 	public class CigarAdminController : Controller
     {
         // GET: CigarAdmin

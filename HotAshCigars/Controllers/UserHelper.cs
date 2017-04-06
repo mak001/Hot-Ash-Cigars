@@ -13,7 +13,7 @@ namespace HotAshCigars.Controllers {
 
 		private const string cookieName = "HotAshTemporaryUserCookie";
 
-		public static Guid GetUserId() {
+		public static Guid GetUserID() {
 			Guid userId;
 
 			if (HttpContext.Current.User != null) {
@@ -50,21 +50,20 @@ namespace HotAshCigars.Controllers {
 		}
 
 		public static void TransferTemporaryUserToRealUser(Guid tempId, string userId) {
-			// TODO
-			/*
-			using (TicketDominatorContext context = new TicketDominatorContext()) {
-				if (context.ShoppingCarts.Any(x => x.UserId == tempId)) {
-					Guid newUserId = Guid.Parse(userId);
-					var list = context.ShoppingCarts.Include("Ticket").Where(x => x.UserId == tempId);
+
+			using (HotAshContext context = new HotAshContext()) {
+				if (context.ShoppingCarts.Any(x => x.UserID == tempId)) {
+					Guid newUserID = Guid.Parse(userId);
+					var list = context.ShoppingCarts.Include("Cigar").Where(x => x.UserID == tempId);
 
 					foreach (var tempCart in list) {
-						var sameItemInShoppingCart = context.ShoppingCarts
-							.FirstOrDefault(x => x.Ticket.Id == tempCart.Ticket.Id && x.UserId == newUserId);
+						var sameItemInCart = context.ShoppingCarts
+							.FirstOrDefault(x => x.Cigar.ID == tempCart.Cigar.ID && x.UserID == newUserID);
 
-						if (sameItemInShoppingCart == null) {
-							tempCart.UserId = newUserId;
+						if (sameItemInCart == null) {
+							tempCart.UserID = newUserID;
 						} else {
-							sameItemInShoppingCart.Quantity++;
+							sameItemInCart.Quantity++;
 							context.ShoppingCarts.Remove(tempCart);
 						}
 					}
@@ -72,7 +71,6 @@ namespace HotAshCigars.Controllers {
 					context.SaveChanges();
 				}
 			}
-			*/
 		}
 
 

@@ -20,6 +20,8 @@ namespace HotAshCigars.Controllers {
 
 		// public virtual DbSet<MyEntity> MyEntities { get; set; }
 		public virtual DbSet<Cigar> Cigars { get; set; }
+		public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
+		public virtual DbSet<Order> Orders { get; set; }
 	}
 
 	//public class MyEntity

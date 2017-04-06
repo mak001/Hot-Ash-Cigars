@@ -69,6 +69,11 @@
     </dl>
 </div>
 <p>
-    @*Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Ajax.ActionLink("Add to Cart", "AddToCart", "Cart", new { @Model.ID }, new AjaxOptions {
+        UpdateTargetId = "shoppingcartsummary",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "Get"
+    }, new { @class = "btn btn-primary my-2" })
+
     @Html.ActionLink("Back to List", "Index")
 </p>

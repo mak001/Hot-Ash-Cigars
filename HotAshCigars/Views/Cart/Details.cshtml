@@ -1,0 +1,33 @@
+﻿@model HotAshCigars.Models.Order
+
+@{
+    HotAshCigars.Models.ApplicationUser au = ViewBag.ApplicationUser;
+}
+
+<h1>Checkout</h1>
+@using (Html.BeginForm()) {
+
+    <div>@au.Email</div>
+
+    <table class="table">
+        <tr>
+            <th>Artist</th>
+            <th>Venue</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var order in Model.OrderDetails) {
+            <tr>
+                <td>@Html.DisplayFor(modelorder => order.Cigar.Name)</td>
+                <td>@Html.DisplayFor(modelorder => order.Cigar.Price)</td>
+                <td>
+                    <input type="text" value="@order.Quantity" id="@order.Cigar.ID" name="@order.Cigar.ID" />
+                </td>
+                <td>@Html.DisplayFor(modelorder => order.PricePaidEach)</td>
+            </tr>
+        }
+    </table>
+    <p>
+        <input type="submit" value="Complete Order" class="btn btn-default" />
+    </p>
+}

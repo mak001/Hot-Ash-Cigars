@@ -1,0 +1,7 @@
+﻿@model HotAshCigars.Models.ShoppingCartSummary
+
+@if (Model != null && Model.Quantity > 0) {
+    @Model.Quantity
+} else {
+    @Html.Raw(0)
+}
