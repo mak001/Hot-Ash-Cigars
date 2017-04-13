@@ -50,7 +50,7 @@
                         </a>}
 
                     @if (Request.IsAuthenticated) {
-                        @Html.ActionLink("Orders", "Index", "Order", new { area = "" }, new { @class = "nav-item nav-link px-3" })
+                        @Html.ActionLink("Orders", "Index", "Orders", new { area = "" }, new { @class = "nav-item nav-link px-3" })
 }
 
                     @Html.Partial("_LoginPartial")

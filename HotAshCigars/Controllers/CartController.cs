@@ -125,7 +125,7 @@ namespace HotAshCigars.Controllers
 				context.ShoppingCarts.RemoveRange(shoppingCartCigars);
 				context.SaveChanges();
 
-				return RedirectToAction("Details", "Order", new { id = order.ID });
+				return RedirectToAction("Details", "Orders", new { id = order.ID });
 			}
 		}
 	}
