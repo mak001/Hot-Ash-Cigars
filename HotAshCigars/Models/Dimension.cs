@@ -10,5 +10,8 @@ namespace HotAshCigars.Models {
 		public float Height { get; set; }
 		public float Depth { get; set; }
 
+		public override string ToString() {
+			return Width + " X " + Height + " X " + Depth;
+		}
 	}
 }
