@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -49,32 +49,36 @@
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="CuteWebUI.AjaxUploader, Version=4.0.0.0, Culture=neutral, PublicKeyToken=bc00d4b0e43ec38d, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxUploader.4.0.1.0\lib\CuteWebUI.AjaxUploader.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.7\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.3.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.3.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.3.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    <Reference Include="Microsoft.AI.Web, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.3.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.3.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.3.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -82,6 +86,42 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -172,33 +212,6 @@
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Facebook">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -211,7 +224,17 @@
     <Compile Include="Controllers\CigarAdminController.cs" />
     <Compile Include="Controllers\CigarsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Migrations\201704060113086_InitialCreate.cs" />
+    <Compile Include="Migrations\201704060113086_InitialCreate.Designer.cs">
+      <DependentUpon>201704060113086_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704250022207_Images.cs" />
+    <Compile Include="Migrations\201704250022207_Images.Designer.cs">
+      <DependentUpon>201704250022207_Images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\HotAshContext.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserHelper.cs" />
@@ -222,11 +245,21 @@
     <Compile Include="Models\Cigar.cs" />
     <Compile Include="Models\Dimension.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\ImageViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="Models\ShoppingCartSummary.cs" />
+    <Compile Include="mvc\mvc4_cs\App_Start\FilterConfig.cs" />
+    <Compile Include="mvc\mvc4_cs\App_Start\RouteConfig.cs" />
+    <Compile Include="mvc\mvc4_cs\App_Start\WebApiConfig.cs" />
+    <Compile Include="mvc\mvc4_cs\Controllers\DemoController.cs" />
+    <Compile Include="mvc\mvc4_cs\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="mvc\mvc4_cs\Models\FileManagerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -251,7 +284,193 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="html5\bin\CuteWebUI.AjaxUploader.dll" />
+    <Content Include="html5\default.htm" />
+    <Content Include="html5\image-upload.htm" />
+    <Content Include="html5\installation.htm" />
+    <Content Include="html5\jQuery-upload.htm" />
+    <Content Include="html5\samples\Bootstrap-jQuery-Grid.aspx" />
+    <Content Include="html5\samples\Bootstrap-jQuery-List.aspx" />
+    <Content Include="html5\samples\Bootstrap-jQuery-Upload-01.aspx" />
+    <Content Include="html5\samples\Bootstrap-jQuery-Upload-02.aspx" />
+    <Content Include="html5\samples\Camera-Test.aspx" />
+    <Content Include="html5\samples\Camera-Test2.aspx" />
+    <Content Include="html5\samples\css\bootstrap-theme.css" />
+    <Content Include="html5\samples\css\bootstrap-theme.min.css" />
+    <Content Include="html5\samples\css\bootstrap.css" />
+    <Content Include="html5\samples\css\bootstrap.min.css" />
+    <Content Include="html5\samples\Drag-drop-file.aspx" />
+    <Content Include="html5\samples\Drag-drop-file2.aspx" />
+    <Content Include="html5\samples\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="html5\samples\Image-Drag-Drop.aspx" />
+    <Content Include="html5\samples\Image-Drag-Drop2.aspx" />
+    <Content Include="html5\samples\Image-Preview.aspx" />
+    <Content Include="html5\samples\Image-Rectangle.aspx" />
+    <Content Include="html5\samples\Image-Square.aspx" />
+    <Content Include="html5\samples\images\cloud-upload1.png" />
+    <Content Include="html5\samples\images\cloud-upload2.png" />
+    <Content Include="html5\samples\images\cloud-upload3.png" />
+    <Content Include="html5\samples\images\drag-and-drop-area.png" />
+    <Content Include="html5\samples\images\drag-and-drop-file-upload.png" />
+    <Content Include="html5\samples\images\drag-and-drop-image.png" />
+    <Content Include="html5\samples\images\drag-and-drop-image2.png" />
+    <Content Include="html5\samples\images\drag-and-drop-zone.png" />
+    <Content Include="html5\samples\images\dragnote.png" />
+    <Content Include="html5\samples\images\file.png" />
+    <Content Include="html5\samples\images\icon16_close.png" />
+    <Content Include="html5\samples\images\icon64_add.png" />
+    <Content Include="html5\samples\js\bootstrap.js" />
+    <Content Include="html5\samples\js\bootstrap.min.js" />
+    <Content Include="html5\samples\js\jquery.min.js" />
+    <Content Include="html5\samples\js\npm.js" />
+    <Content Include="html5\samples\Nice-Image-Grid.aspx" />
+    <Content Include="html5\samples\Nice-Image-List.aspx" />
+    <Content Include="html5\uploader.css" />
+    <Content Include="html5\uploadertheme.css" />
+    <Content Include="mvc\mvc4_cs\bin\CuteWebUI.AjaxUploader.dll" />
+    <Content Include="mvc\mvc4_cs\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="mvc\mvc4_cs\bin\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="mvc\mvc4_cs\bin\mvc_cs.dll" />
+    <Content Include="mvc\mvc4_cs\bin\mvc_cs.pdb" />
+    <Content Include="mvc\mvc4_cs\bin\Newtonsoft.Json.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Net.Http.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Net.Http.WebRequest.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Net.Http.WebRequest.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Net.Http.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Helpers.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Helpers.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Http.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Http.WebHost.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Mvc.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Razor.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.Razor.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="mvc\mvc4_cs\bin\System.Web.WebPages.xml" />
+    <Content Include="mvc\mvc4_cs\Content\circle.png" />
+    <Content Include="mvc\mvc4_cs\Content\demo.css" />
+    <Content Include="mvc\mvc4_cs\Content\images\mac-bar.png" />
+    <Content Include="mvc\mvc4_cs\Content\images\win7-bar.png" />
+    <Content Include="mvc\mvc4_cs\Content\images\win7-bg.png" />
+    <Content Include="mvc\mvc4_cs\Content\uploadertheme.css" />
+    <Content Include="mvc\mvc4_cs\default.htm" />
+    <Content Include="mvc\mvc4_cs\Global.asax" />
+    <Content Include="mvc\mvc4_cs\installation.htm" />
+    <Content Include="mvc\mvc4_cs\mvc_cs.csproj" />
+    <Content Include="mvc\mvc4_cs\mvc_cs.csproj.user" />
+    <Content Include="mvc\mvc4_cs\mvc_cs.sln" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\mvc_cs.csproj.FileListAbsolute.txt" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\mvc_cs.dll" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\mvc_cs.pdb" />
+    <Content Include="mvc\mvc4_cs\uploader.css" />
+    <Content Include="mvc\mvc4_vb\App_Start\FilterConfig.vb" />
+    <Content Include="mvc\mvc4_vb\App_Start\RouteConfig.vb" />
+    <Content Include="mvc\mvc4_vb\App_Start\WebApiConfig.vb" />
+    <Content Include="mvc\mvc4_vb\bin\CuteWebUI.AjaxUploader.dll" />
+    <Content Include="mvc\mvc4_vb\bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="mvc\mvc4_vb\bin\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="mvc\mvc4_vb\bin\mvc_vb.dll" />
+    <Content Include="mvc\mvc4_vb\bin\mvc_vb.pdb" />
+    <Content Include="mvc\mvc4_vb\bin\mvc_vb.xml" />
+    <Content Include="mvc\mvc4_vb\bin\Newtonsoft.Json.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Net.Http.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Net.Http.WebRequest.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Net.Http.WebRequest.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Net.Http.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Helpers.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Helpers.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Http.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Http.WebHost.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Mvc.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Razor.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.Razor.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="mvc\mvc4_vb\bin\System.Web.WebPages.xml" />
+    <Content Include="mvc\mvc4_vb\Content\circle.png" />
+    <Content Include="mvc\mvc4_vb\Content\demo.css" />
+    <Content Include="mvc\mvc4_vb\Content\images\mac-bar.png" />
+    <Content Include="mvc\mvc4_vb\Content\images\win7-bar.png" />
+    <Content Include="mvc\mvc4_vb\Content\images\win7-bg.png" />
+    <Content Include="mvc\mvc4_vb\Content\uploadertheme.css" />
+    <Content Include="mvc\mvc4_vb\Controllers\DemoController.vb" />
+    <Content Include="mvc\mvc4_vb\default.htm" />
+    <Content Include="mvc\mvc4_vb\Global.asax" />
+    <Content Include="mvc\mvc4_vb\Global.asax.vb" />
+    <Content Include="mvc\mvc4_vb\installation.htm" />
+    <Content Include="mvc\mvc4_vb\Models\FileManagerProvider.vb" />
+    <Content Include="mvc\mvc4_vb\mvc_vb.sln" />
+    <Content Include="mvc\mvc4_vb\mvc_vb.vbproj" />
+    <Content Include="mvc\mvc4_vb\mvc_vb.vbproj.user" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\mvc_vb.dll" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\mvc_vb.pdb" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\mvc_vb.vbproj.FileListAbsolute.txt" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\mvc_vb.xml" />
+    <Content Include="mvc\mvc4_vb\uploader.css" />
+    <Content Include="mvc\mvc4_vb\Web.config" />
+    <Content Include="mvc\mvc4_vb\Views\_ViewStart.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Web.config" />
+    <Content Include="mvc\mvc4_vb\Views\Shared\_Layout.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Shared\Error.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\Start_uploading_manually.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\simple_upload_Validation.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\simple_upload_UI.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\simple_upload.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\selecting_multiple_files.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\multiple_files_upload_control_file_number.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\multiple_files_upload.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\Large_File_Upload.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\Drag_drop_file.vbhtml" />
+    <Content Include="mvc\mvc4_vb\Views\Demo\Customize_Progress_Bar.vbhtml" />
+    <Content Include="mvc\mvc4_vb\UploadHandler.ashx" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\mvc_vb.vbprojResolveAssemblyReference.cache" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="mvc\mvc4_vb\obj\Debug\build.force" />
+    <Content Include="mvc\mvc4_vb\mvc_vb.v11.suo" />
+    <Content Include="mvc\mvc4_vb\bin\mvc_vb.dll.config" />
+    <Content Include="mvc\mvc4_vb\bin\ajaxuploader4.lic" />
+    <Content Include="mvc\mvc4_cs\Web.config" />
+    <Content Include="mvc\mvc4_cs\Views\_ViewStart.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Web.config" />
+    <Content Include="mvc\mvc4_cs\Views\Shared\_Layout.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Shared\Error.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\Start_uploading_manually.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\simple_upload_Validation.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\simple_upload_UI.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\simple_upload.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\selecting_multiple_files.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\multiple_files_upload_control_file_number.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\multiple_files_upload.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\Large_File_Upload.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\Drag_drop_file.cshtml" />
+    <Content Include="mvc\mvc4_cs\Views\Demo\Customize_Progress_Bar.cshtml" />
+    <Content Include="mvc\mvc4_cs\UploadHandler.ashx" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\mvc_cs.csprojResolveAssemblyReference.cache" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="mvc\mvc4_cs\obj\Debug\build.force" />
+    <Content Include="mvc\mvc4_cs\mvc_cs.v11.suo" />
+    <Content Include="mvc\mvc4_cs\bin\mvc_cs.dll.config" />
+    <Content Include="mvc\mvc4_cs\bin\ajaxuploader4.lic" />
+    <Content Include="html5\Web.Config" />
+    <Content Include="html5\samples\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="html5\samples\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="html5\samples\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="html5\samples\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="html5\samples\css\bootstrap.css.map" />
+    <Content Include="html5\samples\css\bootstrap-theme.css.map" />
+    <Content Include="html5\bin\ajaxuploader4.lic" />
+    <Content Include="doc\evaluation.rtf" />
+    <Content Include="doc\ajaxuploader.chm" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="READ_ME.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -316,6 +535,8 @@
     <Content Include="Views\Cart\Details.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
     <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Image\Create.cshtml" />
+    <Content Include="Views\Image\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -327,6 +548,14 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704060113086_InitialCreate.resx">
+      <DependentUpon>201704060113086_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704250022207_Images.resx">
+      <DependentUpon>201704250022207_Images.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -360,8 +589,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
