@@ -97,5 +97,5 @@ namespace HotAshCigars.Controllers {
 				return View();
 			}
 		}
-	}
+	} // End of class
 }
