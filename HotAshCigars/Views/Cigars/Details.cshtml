@@ -4,76 +4,46 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
 <div>
-    <h4>Cigar</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+    <div class="jumbotron col-sm-12">
+        <h1 class="text-center display-3">@Html.DisplayNameFor(model => model.Name)</h1>
+    </div>
+    
+    <div class="container">
+        <p>@Html.DisplayFor(model => model.Description)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+        <table class="table my-0">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Weight)</th>
+                <td>@Html.DisplayFor(model => model.Weight)</td>
+            </tr>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Dimensions.Width)</th>
+                <td>@Html.DisplayFor(model => model.Dimensions.Width)</td>
+            </tr>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Dimensions.Height)</th>
+                <td>@Html.DisplayFor(model => model.Dimensions.Height)</td>
+            </tr>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Dimensions.Depth)</th>
+                <td>@Html.DisplayFor(model => model.Dimensions.Depth)</td>
+            </tr>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Price)</th>
+                <td>@Html.DisplayFor(model => model.Price)</td>
+            </tr>
+        </table>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dimensions.Width)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dimensions.Width)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dimensions.Height)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dimensions.Height)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dimensions.Depth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dimensions.Depth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-
-    </dl>
+    </div>
 </div>
-<p>
+<div class="container row flex-column flex-sm-row justify-content-around mx-auto">
     @Ajax.ActionLink("Add to Cart", "AddToCart", "Cart", new { @Model.ID }, new AjaxOptions {
         UpdateTargetId = "shoppingcartsummary",
         InsertionMode = InsertionMode.Replace,
         HttpMethod = "Get"
-    }, new { @class = "btn btn-primary my-2" })
+    }, new { @class = "btn btn-outline-dark my-2" })
 
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-dark my-2" })
+</div>
+

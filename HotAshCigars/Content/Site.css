@@ -123,6 +123,10 @@ textarea {
     max-width: 280px;
 }
 
+textarea {
+    width: 100%;
+}
+
 footer {
     position: relative;
     color: #FFFFFF;
