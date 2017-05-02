@@ -7,16 +7,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
 @if (Model != null) {
     <div class="row mb-3">
         @foreach (var item in Model) {
             <div class="col-md-6 col-xl-4">
-                <div class="card my-1">
-                    <img class="card-img-top img-fluid" src="http://placehold.it/350x200" />
+                <div class="card card-inverse my-1" style="background-image: url(http://placehold.it/350x200)">
                     <div class="card-block">
-                        <h4 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
+                        <h4 class="card-title text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
                         <table class="table my-0">
                             <tr>
                                 <th>@Html.DisplayNameFor(modelItem => item.Weight)</th>
@@ -28,12 +25,12 @@
                             </tr>
                         </table>
                         <div class="container row flex-column flex-sm-row justify-content-around mx-auto">
-                            @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-info my-2" })
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-outline-light my-2" })
                             @Ajax.ActionLink("Add to Cart", "AddToCart", "Cart", new { @item.ID }, new AjaxOptions {
                                 UpdateTargetId = "shoppingcartsummary",
                                 InsertionMode = InsertionMode.Replace,
                                 HttpMethod = "Get"
-                            }, new { @class = "btn btn-primary my-2" })
+                            }, new { @class = "btn btn-outline-dark my-2" })
                         </div>
                     </div>
                 </div>

@@ -3,10 +3,10 @@ namespace HotAshCigars.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Reset : DbMigration
     {
         public override void Up()
-        {
+        {/*
             CreateTable(
                 "dbo.Cigars",
                 c => new
@@ -63,6 +63,7 @@ namespace HotAshCigars.Migrations
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Cigars", t => t.Cigar_ID, cascadeDelete: true)
                 .Index(t => t.Cigar_ID);
+				*/
             
         }
         
