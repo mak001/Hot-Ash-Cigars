@@ -57,6 +57,7 @@ header + nav a, header + nav a:hover {
 
 main {
     flex-grow: 1;
+    max-width: 100%;
 }
 
 .card.card-inverse {
@@ -125,6 +126,23 @@ textarea {
 
 textarea {
     width: 100%;
+}
+
+.page-item .page-link {
+    color: #000000;
+    background-color: #eceeef;
+    border-color: #ddd;
+}
+
+.page-item .page-link:hover {
+    background-color:#DDDDDD;
+    border-color: #C0C0C0;
+}
+
+.page-item.active .page-link {
+    color: #FFFFFF;
+    background-color: #000000;
+    border-color: #000000;
 }
 
 footer {

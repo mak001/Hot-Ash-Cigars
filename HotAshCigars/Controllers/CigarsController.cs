@@ -21,7 +21,7 @@ namespace HotAshCigars.Controllers
 			}
 
 			using (HotAshContext context = new HotAshContext()) {
-				var cigars = context.Cigars;
+				var cigars = context.Cigars.OrderBy(x => x.Name);
 				return View(cigars.ToPagedList(page, pageQty));
 			}
         }
