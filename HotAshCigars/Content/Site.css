@@ -118,10 +118,11 @@ main {
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]),
 select,
 textarea {
     max-width: 280px;
+    min-width: 280px;
 }
 
 textarea {

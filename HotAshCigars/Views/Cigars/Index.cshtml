@@ -10,7 +10,7 @@
 @if (Model != null) {
     <div class="row mb-3">
         @foreach (var item in Model) {
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-4 mx-auto">
                 <div class="card card-inverse my-1" style="background-image: url(http://placehold.it/350x200)">
                     <div class="card-block">
                         <h4 class="card-title text-center">@Html.DisplayFor(modelItem => item.Name)</h4>
